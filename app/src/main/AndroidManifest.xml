@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.dmw.myapplication">
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:name=".MyApplication"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity
+                android:name=".NativePageActivity"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+                android:theme="@style/Theme.AppCompat"
+                android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+                android:name=".FlutterFragmentPageActivity"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+                android:hardwareAccelerated="true"
+                android:theme="@style/Theme.AppCompat"
+                android:windowSoftInputMode="adjustResize">
+            <meta-data
+                    android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                    android:resource="@drawable/page_loading"/>
+
+        </activity>
+
+        <!--声明com.idlefish.flutterboost.containers.NewBoostFlutterActivity-->
+        <activity
+                android:name="com.idlefish.flutterboost.containers.NewBoostFlutterActivity"
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+                android:hardwareAccelerated="true"
+                android:theme="@style/Theme.AppCompat"
+                android:windowSoftInputMode="adjustResize">
+            <meta-data
+                    android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                    android:resource="@drawable/page_loading"/>
+
+        </activity>
+
+    </application>
+
+
+</manifest>
